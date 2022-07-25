@@ -1,9 +1,11 @@
 <script lang="ts">
-  import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
+  import type { TopAppBarComponentDev } from '@smui/top-app-bar';
+  import TopAppBar, { Row, Section, Title, AutoAdjust } from '@smui/top-app-bar';
   import IconButton from '@smui/icon-button';
+  let topAppBar: TopAppBarComponentDev;
 </script>
 
-<TopAppBar>
+<TopAppBar bind:this={topAppBar} variant="standard">
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
@@ -15,11 +17,15 @@
   </Row>
 </TopAppBar>
 
-<slot />
+<AutoAdjust {topAppBar}>
+  <slot />
+</AutoAdjust>
 
 <style>
-  :global(html), :global(body) {
+  :global(html),
+  :global(body) {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
   }
 </style>
