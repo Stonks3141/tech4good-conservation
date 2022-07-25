@@ -6,7 +6,7 @@
     "build": "vite build",
     "package": "svelte-kit package",
     "preview": "vite preview",
-    "prepare": "svelte-kit sync && pnpm smui-theme-light && pnpm smui-theme-dark",
+    "prepare": "svelte-kit sync && npm run smui-theme-light && npm run smui-theme-dark",
     "smui-theme-light": "smui-theme compile static/smui.css -i src/theme",
     "smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark",
     "test": "playwright test",
@@ -16,11 +16,13 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@material/dom": "^14.0.0",
     "@material/theme": "^14.0.0",
     "@material/typography": "^14.0.0",
     "@mdi/js": "^7.0.96",
     "@playwright/test": "^1.22.2",
     "@smui/icon-button": "^6.0.0",
+    "@smui/layout-grid": "^6.0.0",
     "@smui/top-app-bar": "^6.0.0",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",

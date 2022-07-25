@@ -7,9 +7,19 @@
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
-      <Title>Thing</Title>
+      <Title>Conservation</Title>
+    </Section>
+    <Section align="end">
+      <IconButton class="material-icons">search</IconButton>
     </Section>
   </Row>
 </TopAppBar>
 
 <slot />
+
+<style>
+  :global(html), :global(body) {
+    margin: 0;
+    padding: 0;
+  }
+</style>
