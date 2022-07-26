@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  export async function load({ fetch }) {
+  export async function load({ fetch }: { fetch: any }) {
     const res = await fetch('/topics/manifest.json');
     let ids = await res.json();
 
@@ -9,8 +9,6 @@
         return await topicRes.json();
       })
     );
-
-    
 
     return {
       status: res.status,
@@ -23,13 +21,13 @@
 
 <script lang="ts">
   import LayoutGrid, { Cell } from '@smui/layout-grid';
-  import Card, { PrimaryAction, Media } from '@smui/card';
+  import Card, { PrimaryAction } from '@smui/card';
   import type { Topic } from '$lib';
-  export let topics: { id: string, topic: Topic}[];
+  export let topics: { id: string; topic: Topic }[];
 </script>
 
 <LayoutGrid class="card-display">
-  {#each topics as {id, topic}}
+  {#each topics as { id, topic }}
     <Cell class="card-container">
       <div class="cell">
         <Card>

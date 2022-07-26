@@ -1,9 +1,9 @@
 export interface Topic {
   title: string;
   image: {
-    type?: string;
+    type: string;
     src: string;
-    alt?: string;
+    alt: string;
   };
   importance: string;
   help: string;

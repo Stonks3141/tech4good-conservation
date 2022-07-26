@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  export async function load({ params, fetch }) {
+  export async function load({ params, fetch }: { params: { topic: string }; fetch: any }) {
     const res = await fetch(`/topics/${params.topic}.json`);
     return {
       status: res.status,
@@ -20,7 +20,18 @@
 <h1>{title}</h1>
 
 <h2>Why is it important?</h2>
-<p>{importance}</p>
+<p>{@html importance}</p>
 
 <h2>How you can help</h2>
-<p>{help}</p>
+<p>{@html help}</p>
+
+<h2>See Also</h2>
+<ul>
+  {#each topic.seeAlso as href}
+    {#await fetch(`/topics/${href}.json`) then res}
+      {#await res.json() then data}
+        <li><a href={`/topics/${href}`}>{data.title}</a></li>
+      {/await}
+    {/await}
+  {/each}
+</ul>
