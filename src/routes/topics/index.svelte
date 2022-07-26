@@ -21,7 +21,8 @@
 
 <script lang="ts">
   import LayoutGrid, { Cell } from '@smui/layout-grid';
-  import Card, { PrimaryAction } from '@smui/card';
+  import Card, { PrimaryAction, Actions } from '@smui/card';
+  import Button, { Label } from '@smui/button';
   import type { Topic } from '$lib';
   export let topics: { id: string; topic: Topic }[];
 </script>
@@ -29,24 +30,25 @@
 <LayoutGrid class="card-display">
   {#each topics as { id, topic }}
     <Cell class="card-container">
-      <div class="cell">
-        <Card>
-          <a href={`/topics/${id}`}>
-            <PrimaryAction>
-              <img {...topic.image} />
-            </PrimaryAction>
-          </a>
-          <h2 class="mdc-typography--headline5">{topic.title}</h2>
-        </Card>
-      </div>
+      <Card>
+        <a href={`/topics/${id}`}>
+          <PrimaryAction>
+            <img {...topic.image} />
+          </PrimaryAction>
+        </a>
+        <h2 class="mdc-typography--headline5">{topic.title}</h2>
+        <Actions fullBleed>
+          <Button href={`/topics/${id}`}>
+            <Label>Learn More</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </Card>
     </Cell>
   {/each}
 </LayoutGrid>
 
 <style>
-  /* .cell {
-    width: 200px;
-  }*/
   h2 {
     padding: 1rem;
     margin: 0;

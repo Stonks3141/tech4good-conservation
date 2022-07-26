@@ -4,9 +4,14 @@
   import IconButton from '@smui/icon-button';
   import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
   import List, { Item, Text } from '@smui/list';
-  import { MarkGithub16 } from 'svelte-octicons';
+  import { MarkGithub16, LinkExternal16 } from 'svelte-octicons';
+  import { session } from '$app/stores';
+
   let topAppBar: TopAppBarComponentDev;
   let open = false;
+
+  let title: string;
+  session.subscribe((val) => (title = val.title));
 </script>
 
 <div class="drawer-container">
@@ -17,10 +22,12 @@
           <Text>Home</Text>
         </Item>
         <Item href="/topics" on:click={() => (open = false)}>
-          <Text>Explore</Text>
+          <Text>{title}</Text>
         </Item>
         <Item href="https://github.com/Stonks3141/tech4good-conservation">
           <MarkGithub16 />
+          &nbsp;
+          <LinkExternal16 />
         </Item>
       </List>
     </Content>
@@ -54,5 +61,10 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(svg) {
+      fill: white;
+    }
   }
 </style>
