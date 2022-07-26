@@ -12,8 +12,12 @@
 
 <script lang="ts">
   import type { Topic } from '$lib';
+  import { title as pageTitle } from '$lib/stores';
+
   export let topic: Topic;
   const { title, image, importance, help } = topic;
+
+  pageTitle.set(title);
 </script>
 
 <img {...image} />

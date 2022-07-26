@@ -24,7 +24,11 @@
   import Card, { PrimaryAction, Actions } from '@smui/card';
   import Button, { Label } from '@smui/button';
   import type { Topic } from '$lib';
+  import { title } from '$lib/stores';
+
   export let topics: { id: string; topic: Topic }[];
+
+  title.set('Explore');
 </script>
 
 <LayoutGrid class="card-display">

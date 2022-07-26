@@ -5,24 +5,28 @@
   import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
   import List, { Item, Text } from '@smui/list';
   import { MarkGithub16, LinkExternal16 } from 'svelte-octicons';
-  import { session } from '$app/stores';
+  import { title } from '$lib/stores';
 
   let topAppBar: TopAppBarComponentDev;
   let open = false;
 
-  let title: string;
-  session.subscribe((val) => (title = val.title));
+  let pageTitle: string;
+  title.subscribe((val) => (pageTitle = val));
+  title.set('Conservation');
 </script>
 
 <div class="drawer-container">
   <Drawer variant="modal" fixed={false} bind:open>
     <Content>
       <List>
+        <Item on:click={() => (open = false)}>
+          <i class="material-icons" aria-hidden="true">arrow_backward</i>
+        </Item>
         <Item href="/" on:click={() => (open = false)}>
           <Text>Home</Text>
         </Item>
         <Item href="/topics" on:click={() => (open = false)}>
-          <Text>{title}</Text>
+          <Text>Explore</Text>
         </Item>
         <Item href="https://github.com/Stonks3141/tech4good-conservation">
           <MarkGithub16 />
@@ -39,7 +43,7 @@
       <Row>
         <Section>
           <IconButton on:click={() => (open = !open)} class="material-icons">menu</IconButton>
-          <Title>Conservation</Title>
+          <Title>{pageTitle}</Title>
         </Section>
         <Section align="end">
           <IconButton class="material-icons">search</IconButton>
