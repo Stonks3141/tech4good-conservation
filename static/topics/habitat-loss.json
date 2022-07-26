@@ -1,0 +1,11 @@
+{
+  "title": "Habitat Loss",
+  "image": {
+    "type": "image/jpeg",
+    "src": "https://www.climateaction.org/images/made/images/uploads/articles/anaustralia_1000_667_80.jpg",
+    "alt": "habitat loss"
+  },
+  "importance": "Animals die without a safe place to live.",
+  "help": "You can help by doing things.",
+  "seeAlso": ["deforestation"]
+}
