@@ -6,13 +6,13 @@
   import List, { Item, Text } from '@smui/list';
   import { MarkGithub16, LinkExternal16 } from 'svelte-octicons';
   import { title } from '$lib/stores';
+  import { goto } from '$app/navigation';
 
   let topAppBar: TopAppBarComponentDev;
   let open = false;
 
   let pageTitle: string;
   title.subscribe((val) => (pageTitle = val));
-  title.set('Conservation');
 </script>
 
 <div class="drawer-container">
@@ -20,7 +20,7 @@
     <Content>
       <List>
         <Item on:click={() => (open = false)}>
-          <i class="material-icons" aria-hidden="true">arrow_backward</i>
+          <i class="material-icons" aria-hidden="true">arrow_back</i>
         </Item>
         <Item href="/" on:click={() => (open = false)}>
           <Text>Home</Text>
@@ -42,6 +42,13 @@
     <TopAppBar bind:this={topAppBar} variant="standard">
       <Row>
         <Section>
+          <IconButton
+            on:click={() => {
+              const url = window.location.pathname.split('/');
+              goto('/' + url.slice(1, url.length - 1).join('/'));
+            }}
+            class="material-icons">arrow_back</IconButton
+          >
           <IconButton on:click={() => (open = !open)} class="material-icons">menu</IconButton>
           <Title>{pageTitle}</Title>
         </Section>

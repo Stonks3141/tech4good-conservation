@@ -2,7 +2,6 @@
 
 @use '@material/theme/color-palette';
 
-// Svelte Colors!
 @use '@material/theme/index' as theme with (
   $primary: color-palette.$green-500,
   $secondary: color-palette.$green-600,
@@ -10,6 +9,7 @@
   $background: #fff,
   $error: color-palette.$red-900
 );
+@use './app.scss';
 
 html,
 body {

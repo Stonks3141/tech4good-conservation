@@ -34,20 +34,22 @@
 <LayoutGrid class="card-display">
   {#each topics as { id, topic }}
     <Cell class="card-container">
-      <Card>
-        <a href={`/topics/${id}`}>
-          <PrimaryAction>
-            <img {...topic.image} />
-          </PrimaryAction>
-        </a>
-        <h2 class="mdc-typography--headline5">{topic.title}</h2>
-        <Actions fullBleed>
-          <Button href={`/topics/${id}`}>
-            <Label>Learn More</Label>
-            <i class="material-icons" aria-hidden="true">arrow_forward</i>
-          </Button>
-        </Actions>
-      </Card>
+      <div class="cell">
+        <Card>
+          <a href={`/topics/${id}`}>
+            <PrimaryAction>
+              <img {...topic.image} />
+            </PrimaryAction>
+          </a>
+          <h2 class="mdc-typography--headline5">{topic.title}</h2>
+          <Actions fullBleed>
+            <Button href={`/topics/${id}`}>
+              <Label>Learn More</Label>
+              <i class="material-icons" aria-hidden="true">arrow_forward</i>
+            </Button>
+          </Actions>
+        </Card>
+      </div>
     </Cell>
   {/each}
 </LayoutGrid>
@@ -56,5 +58,8 @@
   h2 {
     padding: 1rem;
     margin: 0;
+  }
+  .cell {
+    max-width: 400px;
   }
 </style>

@@ -6,6 +6,6 @@ export interface Topic {
     alt: string;
   };
   importance: string;
+  solutions: string;
   help: string;
-  seeAlso: string[];
 }
