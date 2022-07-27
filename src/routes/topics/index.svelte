@@ -58,8 +58,8 @@
   }
   .card-display {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    place-content: center;
     gap: 1.5rem;
     padding: 1.5rem;
   }
