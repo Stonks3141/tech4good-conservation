@@ -19,6 +19,7 @@
       <Label>Explore</Label>
     </Button>
   </div>
+  <div style="flex-basis:10%" />
 </div>
 
 <style>
@@ -37,7 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33%;
+    width: 400px;
     padding: 1.5rem;
     border-radius: 4px;
     background-color: black;

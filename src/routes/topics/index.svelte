@@ -20,7 +20,6 @@
 </script>
 
 <script lang="ts">
-  import LayoutGrid, { Cell } from '@smui/layout-grid';
   import Card, { PrimaryAction, Actions } from '@smui/card';
   import Button, { Label } from '@smui/button';
   import type { Topic } from '$lib';
@@ -31,35 +30,44 @@
   title.set('Explore');
 </script>
 
-<LayoutGrid class="card-display">
+<div class="card-display">
   {#each topics as { id, topic }}
-    <Cell class="card-container">
-      <div class="cell">
-        <Card>
-          <a href={`/topics/${id}`}>
-            <PrimaryAction>
-              <img {...topic.image} />
-            </PrimaryAction>
-          </a>
-          <h2 class="mdc-typography--headline5">{topic.title}</h2>
-          <Actions fullBleed>
-            <Button href={`/topics/${id}`}>
-              <Label>Learn More</Label>
-              <i class="material-icons" aria-hidden="true">arrow_forward</i>
-            </Button>
-          </Actions>
-        </Card>
-      </div>
-    </Cell>
+    <div class="card-container">
+      <Card>
+        <a href={`/topics/${id}`}>
+          <PrimaryAction>
+            <img {...topic.image} />
+          </PrimaryAction>
+        </a>
+        <h2 class="mdc-typography--headline5">{topic.title}</h2>
+        <Actions fullBleed>
+          <Button href={`/topics/${id}`}>
+            <Label>Learn More</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </Card>
+    </div>
   {/each}
-</LayoutGrid>
+</div>
 
 <style>
   h2 {
     padding: 1rem;
     margin: 0;
   }
-  .cell {
-    max-width: 400px;
+  .card-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .card-container {
+    width: 400px;
+  }
+  img {
+    height: 284px;
+    object-fit: cover;
   }
 </style>
