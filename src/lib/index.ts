@@ -5,7 +5,12 @@ export interface Topic {
     src: string;
     alt: string;
   };
-  importance: string;
-  solutions: string;
-  help: string;
+}
+
+export interface TopicExt extends Topic {
+  content: {
+    importance: string;
+    solutions: string;
+    help: string;
+  };
 }

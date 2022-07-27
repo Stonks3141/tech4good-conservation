@@ -1,22 +1,35 @@
 <script lang="ts" context="module">
-  export async function load({ params, fetch }: { params: { topic: string }; fetch: any }) {
-    const res = await fetch(`/topics/${params.topic}.json`);
-    return {
-      status: res.status,
-      props: {
-        topic: res.ok && (await res.json()),
+  export const load = async ({
+    params: { topic },
+    fetch,
+  }: {
+    params: { topic: string };
+    fetch: any;
+  }) => ({
+    props: {
+      topic: {
+        ...(await (await fetch(`/topics/${topic}/index.json`)).json()),
+        content: {
+          importance: await (await fetch(`/topics/${topic}/importance.html`)).text(),
+          solutions: await (await fetch(`/topics/${topic}/solutions.html`)).text(),
+          help: await (await fetch(`/topics/${topic}/help.html`)).text(),
+        },
       },
-    };
-  }
+    },
+  });
 </script>
 
 <script lang="ts">
-  import type { Topic } from '$lib';
+  import type { TopicExt } from '$lib';
   import Paper, { Title, Content } from '@smui/paper';
   import { title as pageTitle } from '$lib/stores';
 
-  export let topic: Topic;
-  const { title, image, importance, solutions, help } = topic;
+  export let topic: TopicExt;
+  const {
+    title,
+    image,
+    content: { importance, solutions, help },
+  } = topic;
 
   pageTitle.set(title);
 </script>

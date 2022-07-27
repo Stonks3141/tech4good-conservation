@@ -1,13 +1,10 @@
 <script lang="ts" context="module">
   export async function load({ fetch }: { fetch: any }) {
-    const res = await fetch('/topics/manifest.json');
+    const res = await fetch('/topics/index.json');
     let ids = await res.json();
 
     let topics = await Promise.all(
-      ids.map(async (topic: string) => {
-        const topicRes = await fetch(`/topics/${topic}.json`);
-        return await topicRes.json();
-      })
+      ids.map(async (topic: string) => await (await fetch(`/topics/${topic}/index.json`)).json())
     );
 
     return {
