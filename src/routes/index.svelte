@@ -41,7 +41,12 @@
     width: 400px;
     padding: 1.5rem;
     border-radius: 4px;
-    background-color: black;
+    background-color: white;
     opacity: 0.75;
+  }
+  @media (prefers-color-scheme: dark) {
+    .inner {
+      background-color: black;
+    }
   }
 </style>

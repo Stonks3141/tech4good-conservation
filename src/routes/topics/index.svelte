@@ -64,10 +64,11 @@
     padding: 1.5rem;
   }
   .card-container {
-    width: 400px;
+    width: fit-content;
+    max-width: 384px;
   }
   img {
-    height: 284px;
+    height: 268px;
     object-fit: cover;
   }
 </style>
