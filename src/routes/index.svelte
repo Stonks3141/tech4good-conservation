@@ -40,9 +40,18 @@
     opportunities for education and the enjoyment of the environment.
   </p>
   <div id="icons">
-    <a href="/explore/deforestation"><TreeFall /></a>
-    <a href="/explore/carbon-emissions"><SmokeStack /></a>
-    <a href="/explore/habitat-loss"><HabitatLoss /></a>
+    <div class="icon">
+      <h5>Deforestation</h5>
+      <a href="/explore/deforestation"><TreeFall /></a>
+    </div>
+    <div class="icon">
+      <h5>Carbon Emissions</h5>
+      <a href="/explore/carbon-emissions"><SmokeStack /></a>
+    </div>
+    <div class="icon">
+      <h5>Habitat Loss</h5>
+      <a href="/explore/habitat-destruction"><HabitatLoss /></a>
+    </div>
   </div>
 </div>
 
@@ -82,6 +91,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+  }
+  .icon {
   }
   @media (prefers-color-scheme: dark) {
     .inner {
