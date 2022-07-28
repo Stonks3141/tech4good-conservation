@@ -58,8 +58,7 @@
     padding: 1.5rem;
   }
   .card-container {
-    width: fit-content;
-    max-width: 384px;
+    width: 384px;
   }
   img {
     height: 268px;
