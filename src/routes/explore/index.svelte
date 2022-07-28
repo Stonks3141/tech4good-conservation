@@ -24,25 +24,27 @@
   export let topics: { id: string; topic: Topic }[];
 </script>
 
-<div class="card-display">
-  {#each topics as { id, topic }}
-    <div class="card-container">
-      <Card>
-        <a href={`/explore/${id}`}>
-          <PrimaryAction>
-            <img {...topic.image} />
-          </PrimaryAction>
-        </a>
-        <h2 class="mdc-typography--headline5">{topic.title}</h2>
-        <Actions fullBleed>
-          <Button href={`/explore/${id}`}>
-            <Label>Learn More</Label>
-            <i class="material-icons" aria-hidden="true">arrow_forward</i>
-          </Button>
-        </Actions>
-      </Card>
-    </div>
-  {/each}
+<div class="outer">
+  <div class="card-display">
+    {#each topics as { id, topic }}
+      <div class="card-container">
+        <Card>
+          <a href={`/explore/${id}`}>
+            <PrimaryAction>
+              <img {...topic.image} />
+            </PrimaryAction>
+          </a>
+          <h2 class="mdc-typography--headline5">{topic.title}</h2>
+          <Actions fullBleed>
+            <Button href={`/explore/${id}`}>
+              <Label>Learn More</Label>
+              <i class="material-icons" aria-hidden="true">arrow_forward</i>
+            </Button>
+          </Actions>
+        </Card>
+      </div>
+    {/each}
+  </div>
 </div>
 
 <style>
@@ -53,13 +55,14 @@
   .card-display {
     display: flex;
     flex-wrap: wrap;
-    place-content: center;
     gap: 1.5rem;
     padding: 1.5rem;
   }
   .card-container {
     width: 384px;
     max-width: 100%;
+  }
+  .outer {
   }
   img {
     height: 268px;

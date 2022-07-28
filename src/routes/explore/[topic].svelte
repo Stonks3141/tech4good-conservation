@@ -31,7 +31,7 @@
   const {
     title,
     image,
-    content: { importance, solutions, help },
+    content: { importance, solutions },
   } = topic;
 </script>
 
@@ -45,9 +45,6 @@
 
       <h6 id="solutions">What solutions already exist?</h6>
       {@html solutions}
-
-      <h6 id="help">How can I help?</h6>
-      {@html help}
     </Content>
   </Paper>
 </div>
