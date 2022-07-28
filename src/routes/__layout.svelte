@@ -5,14 +5,14 @@
   import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
   import List, { Item, Text } from '@smui/list';
   import { MarkGithub16, LinkExternal16 } from 'svelte-octicons';
-  import { title } from '$lib/stores';
+  import { page } from '$app/stores';
   import { goto } from '$app/navigation';
 
   let topAppBar: TopAppBarComponentDev;
   let open = false;
 
-  let pageTitle: string;
-  title.subscribe((val) => (pageTitle = val));
+  let title: string;
+  page.subscribe((val) => (title = val.stuff.title));
 </script>
 
 <div class="drawer-container">
@@ -50,7 +50,7 @@
             class="material-icons">arrow_back</IconButton
           >
           <IconButton on:click={() => (open = !open)} class="material-icons">menu</IconButton>
-          <Title>{pageTitle}</Title>
+          <Title>{title}</Title>
         </Section>
         <Section align="end">
           <IconButton class="material-icons">search</IconButton>
