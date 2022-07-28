@@ -31,14 +31,14 @@
   {#each topics as { id, topic }}
     <div class="card-container">
       <Card>
-        <a href={`/topics/${id}`}>
+        <a href={`/explore/${id}`}>
           <PrimaryAction>
             <img {...topic.image} />
           </PrimaryAction>
         </a>
         <h2 class="mdc-typography--headline5">{topic.title}</h2>
         <Actions fullBleed>
-          <Button href={`/topics/${id}`}>
+          <Button href={`/explore/${id}`}>
             <Label>Learn More</Label>
             <i class="material-icons" aria-hidden="true">arrow_forward</i>
           </Button>

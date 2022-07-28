@@ -25,7 +25,7 @@
         <Item href="/" on:click={() => (open = false)}>
           <Text>Home</Text>
         </Item>
-        <Item href="/topics" on:click={() => (open = false)}>
+        <Item href="/explore" on:click={() => (open = false)}>
           <Text>Explore</Text>
         </Item>
         <Item href="https://github.com/Stonks3141/tech4good-conservation">
@@ -76,6 +76,12 @@
   @media (prefers-color-scheme: dark) {
     :global(svg) {
       fill: white;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :global(html),
+    :global(body) {
+      background-color: #f8f8f8;
     }
   }
 </style>

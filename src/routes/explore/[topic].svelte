@@ -39,13 +39,13 @@
   <Paper>
     <Title>{title}</Title>
     <Content>
-      <h6>Why is it important?</h6>
+      <h6 id="importance">Why is it important?</h6>
       {@html importance}
 
-      <h6>What solutions already exist?</h6>
+      <h6 id="solutions">What solutions already exist?</h6>
       {@html solutions}
 
-      <h6>How can I help?</h6>
+      <h6 id="help">How can I help?</h6>
       {@html help}
     </Content>
   </Paper>
