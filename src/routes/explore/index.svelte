@@ -59,6 +59,7 @@
   }
   .card-container {
     width: 384px;
+    max-width: 100%;
   }
   img {
     height: 268px;
