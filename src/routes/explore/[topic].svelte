@@ -43,7 +43,7 @@
       <h6 id="importance">Why is it important?</h6>
       {@html importance}
 
-      <h6 id="solutions">What solutions already exist?</h6>
+      <h6 id="solutions">How could this problem be solved or mitigated?</h6>
       {@html solutions}
     </Content>
   </Paper>
