@@ -11,8 +11,8 @@
   let topAppBar: TopAppBarComponentDev;
   let open = false;
 
-  let pageTitle: string;
-  page.subscribe((val) => (pageTitle = val.stuff.title));
+  let title: string;
+  page.subscribe((val) => (title = val.stuff.title));
 </script>
 
 <div class="drawer-container">
@@ -50,7 +50,7 @@
             class="material-icons">arrow_back</IconButton
           >
           <IconButton on:click={() => (open = !open)} class="material-icons">menu</IconButton>
-          <Title>{pageTitle}</Title>
+          <Title>{title}</Title>
         </Section>
         <Section align="end">
           <IconButton class="material-icons">search</IconButton>
