@@ -42,7 +42,7 @@
     }
     12%,
     50% {
-      transform: rotate(-90deg);
+      transform: rotate(-100deg);
     }
   }
 </style>
