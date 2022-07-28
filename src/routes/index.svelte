@@ -31,7 +31,7 @@
   <div style="flex-basis:10%" />
 </div>
 <div class="lower">
-  <h2>Problem</h2>
+  <h1>The Problem</h1>
   <p>
     Habitats are in a constant state of change both naturally and through human influence. Natural
     change can be managed but change made by humans is often devastating and irreversible. As
@@ -49,7 +49,7 @@
       <a href="/explore/carbon-emissions"><SmokeStack /></a>
     </div>
     <div class="icon">
-      <h5>Habitat Loss</h5>
+      <h5>Habitat Destruction</h5>
       <a href="/explore/habitat-destruction"><HabitatLoss /></a>
     </div>
   </div>
