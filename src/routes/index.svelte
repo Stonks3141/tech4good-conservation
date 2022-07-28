@@ -14,11 +14,11 @@
   <div style="flex-basis:10%" />
   <div class="inner">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      As many governments continue their policies of inaction with regard to climate change and
+      conservation, it becomes increasingly important for individuals to educate themselves and take
+      their own actions. If drastic action is not taken now, a quarter of species are projected to
+      become extinct by 2050. This app compiles information to aid you in learning about
+      environmental problems and potential solutions.
     </p>
     <Button href="/explore" variant="raised">
       <Label>Explore</Label>
