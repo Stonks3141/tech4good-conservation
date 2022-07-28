@@ -29,7 +29,7 @@
     Habitats are in a constant state of change both naturally and through human influence. Natural change can be managed but change made by humans is often devastating and irreversible. As species are lost and landscapes are destroyed people look for ways to conserve our existing resources. It is important to maintain the environment for future generations and to provide opportunities for education and the enjoyment of the environment.
   </p>
     <h2>Solutions</h2>
-  <p>These are some of the environmental challenges facing the world right now. Click on the images to learn more.</p>
+  <p>These are some of the environmental challenges facing the world right now. Click on the icons to learn more.</p>
   <div id="icons">
     <div class="icon">
       <h5>Deforestation</h5>
@@ -88,6 +88,7 @@
     display: flex;
     width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: start;
     justify-content: space-around;
   }
