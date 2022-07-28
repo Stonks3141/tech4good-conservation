@@ -8,7 +8,7 @@
     );
 
     return {
-      status: res.status,
+      stuff: { title: 'Explore' },
       props: {
         topics: topics.map((topic, i) => ({ id: ids[i], topic })),
       },
@@ -20,11 +20,8 @@
   import Card, { PrimaryAction, Actions } from '@smui/card';
   import Button, { Label } from '@smui/button';
   import type { Topic } from '$lib';
-  import { title } from '$lib/stores';
 
   export let topics: { id: string; topic: Topic }[];
-
-  title.set('Explore');
 </script>
 
 <div class="card-display">

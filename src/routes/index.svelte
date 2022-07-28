@@ -1,8 +1,13 @@
-<script lang="ts">
-  import { title } from '$lib/stores';
-  import Button, { Label } from '@smui/button';
+<script context="module" lang="ts">
+  export const load = (_: any) => ({
+    stuff: {
+      title: 'Conservation',
+    },
+  });
+</script>
 
-  title.set('Conservation');
+<script lang="ts">
+  import Button, { Label } from '@smui/button';
 </script>
 
 <div class="outer">
