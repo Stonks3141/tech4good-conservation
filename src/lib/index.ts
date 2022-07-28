@@ -11,6 +11,5 @@ export interface TopicExt extends Topic {
   content: {
     importance: string;
     solutions: string;
-    help: string;
   };
 }
