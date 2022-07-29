@@ -1,8 +1,29 @@
 <svg width="160" height="179" viewBox="0 -20 160 159" fill="none">
   <g id="smoke">
-    <circle id="smoke3" cx="19" cy="55" r="15" fill="#949494" fill-opacity="0.5" />
-    <circle id="smoke2" cx="19" cy="35" r="15" fill="#949494" fill-opacity="0.5" />
-    <circle id="smoke1" cx="19" cy="15" r="15" fill="#949494" fill-opacity="0.5" />
+    <circle
+      id="smoke3"
+      cx="19"
+      cy="55"
+      r="15"
+      fill="#949494"
+      fill-opacity="0.5"
+    />
+    <circle
+      id="smoke2"
+      cx="19"
+      cy="35"
+      r="15"
+      fill="#949494"
+      fill-opacity="0.5"
+    />
+    <circle
+      id="smoke1"
+      cx="19"
+      cy="15"
+      r="15"
+      fill="#949494"
+      fill-opacity="0.5"
+    />
   </g>
   <g>
     <path d="M3.03333 60H35.5333L39 159H0L3.03333 60Z" fill="#C9C9C9" />

@@ -6,15 +6,21 @@
     params: { topic: string };
     fetch: any;
   }) => {
-    const data: Topic = await (await fetch(`/topics/${topic}/index.json`)).json();
+    const data: Topic = await (
+      await fetch(`/topics/${topic}/index.json`)
+    ).json();
     return {
       stuff: { title: data.title },
       props: {
         topic: {
           ...data,
           content: {
-            importance: await (await fetch(`/topics/${topic}/importance.html`)).text(),
-            solutions: await (await fetch(`/topics/${topic}/solutions.html`)).text(),
+            importance: await (
+              await fetch(`/topics/${topic}/importance.html`)
+            ).text(),
+            solutions: await (
+              await fetch(`/topics/${topic}/solutions.html`)
+            ).text(),
             help: await (await fetch(`/topics/${topic}/help.html`)).text(),
           },
         },

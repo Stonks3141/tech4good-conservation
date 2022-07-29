@@ -3,7 +3,13 @@
   export let height: string = '120';
 </script>
 
-<svg {width} {height} viewBox="5 24 67 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+  {width}
+  {height}
+  viewBox="5 24 67 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
   <g>
     <rect id="lower" x="68" y="91" width="13" height="10" fill="#4F1300" />
     <g id="upper">
