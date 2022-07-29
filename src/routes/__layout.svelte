@@ -34,6 +34,9 @@
         <Item href="/explore" on:click={() => (open = false)}>
           <Text>Explore</Text>
         </Item>
+        <Item href="/resources" on:click={() => (open = false)}>
+          <Text>Additional Resources</Text>
+        </Item>
         <Item
           target="_blank"
           rel="noopener noreferrer"
