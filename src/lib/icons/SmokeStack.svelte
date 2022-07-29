@@ -1,4 +1,10 @@
-<svg width="57" height="179" viewBox="0 -20 57 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="160"
+  height="179"
+  viewBox="0 -20 160 159"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
   <g id="smoke">
     <circle id="smoke3" cx="19" cy="55" r="15" fill="#949494" fill-opacity="0.5" />
     <circle id="smoke2" cx="19" cy="35" r="15" fill="#949494" fill-opacity="0.5" />
@@ -17,6 +23,11 @@
       clip-rule="evenodd"
       d="M36.0586 75H2.57374L3.03333 60H35.5333L36.0586 75Z"
       fill="#EE1E1E"
+    />
+    <path
+      d="M87.5 81H0V0.5L28.5 30V0.5L59 30V0.5L87.5 30V81Z"
+      transform="translate(50,80)"
+      fill="#D9D9D9"
     />
   </g>
 </svg>
