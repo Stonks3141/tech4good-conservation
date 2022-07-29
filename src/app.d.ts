@@ -6,9 +6,7 @@
 declare namespace App {
   // interface Locals {}
   // interface Platform {}
-  interface Session {
-    mode: 'light' | 'dark';
-  }
+  // interface Session {}
   interface Stuff {
     title: string;
   }

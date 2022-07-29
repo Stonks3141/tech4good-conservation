@@ -18,8 +18,8 @@
     <Card>
       <Content>
         <h4>
-          The goal of environmental conservation is to ensure the survival of species and is
-          extremely essential to our influence on ecosystems.
+          The goal of environmental conservation is to ensure the long-term survival of species and
+          ecosystems, despite human interaction and interference.
         </h4>
       </Content>
     </Card>
@@ -38,7 +38,7 @@
   <h2>Solutions</h2>
   <p>
     These are some of the environmental challenges facing the world right now. Click on the cards to
-    learn more.
+    learn more, or go to the Explore view.
   </p>
   <div id="icons">
     <Card
@@ -87,6 +87,7 @@
   }
   .card-container {
     width: 400px;
+    margin: 2rem;
     opacity: 0.75;
   }
   .card-container h4 {
@@ -106,6 +107,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: start;
+    align-items: stretch;
   }
 </style>
