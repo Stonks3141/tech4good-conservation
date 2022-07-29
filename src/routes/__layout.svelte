@@ -1,6 +1,11 @@
 <script lang="ts">
   import type { TopAppBarComponentDev } from '@smui/top-app-bar';
-  import TopAppBar, { Row, Section, Title, AutoAdjust } from '@smui/top-app-bar';
+  import TopAppBar, {
+    Row,
+    Section,
+    Title,
+    AutoAdjust,
+  } from '@smui/top-app-bar';
   import IconButton from '@smui/icon-button';
   import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
   import List, { Item, Text } from '@smui/list';
@@ -46,7 +51,9 @@
             <MarkGithub16 />
           </div>
           &nbsp;
-          <i class="material-icons" aria-hidden="true" style="font-size: 1rem;">open_in_new</i>
+          <i class="material-icons" aria-hidden="true" style="font-size: 1rem;"
+            >open_in_new</i
+          >
         </Item>
       </List>
     </Content>
@@ -63,12 +70,15 @@
             }}
             class="material-icons">arrow_back</IconButton
           >
-          <IconButton on:click={() => (open = !open)} class="material-icons">menu</IconButton>
+          <IconButton on:click={() => (open = !open)} class="material-icons"
+            >menu</IconButton
+          >
           <Title>{$page.stuff.title}</Title>
         </Section>
         <Section align="end">
           <IconButton
-            on:click={() => ($theme === 'light' ? ($theme = 'dark') : ($theme = 'light'))}
+            on:click={() =>
+              $theme === 'light' ? ($theme = 'dark') : ($theme = 'light')}
             class="material-icons"
           >
             {#if $theme == 'light'}

@@ -4,7 +4,10 @@
     let ids = await res.json();
 
     let topics = await Promise.all(
-      ids.map(async (topic: string) => await (await fetch(`/topics/${topic}/index.json`)).json())
+      ids.map(
+        async (topic: string) =>
+          await (await fetch(`/topics/${topic}/index.json`)).json()
+      )
     );
 
     return {

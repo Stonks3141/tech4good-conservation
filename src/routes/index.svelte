@@ -18,8 +18,9 @@
     <Card>
       <Content>
         <h4>
-          The goal of environmental conservation is to ensure the long-term survival of species and
-          ecosystems, despite human interaction and interference.
+          The goal of environmental conservation is to ensure the long-term
+          survival of species and ecosystems, despite human interaction and
+          interference.
         </h4>
       </Content>
     </Card>
@@ -29,40 +30,49 @@
 <div class="lower">
   <h2>The Problem</h2>
   <p>
-    Habitats are in a constant state of change both naturally and through human influence. Natural
-    change can be managed but change made by humans is often devastating and irreversible. As
-    species are lost and landscapes are destroyed people look for ways to conserve our existing
-    resources. It is important to maintain the environment for future generations and to provide
+    Habitats are in a constant state of change both naturally and through human
+    influence. Natural change can be managed but change made by humans is often
+    devastating and irreversible. As species are lost and landscapes are
+    destroyed people look for ways to conserve our existing resources. It is
+    important to maintain the environment for future generations and to provide
     opportunities for education and the enjoyment of the environment.
   </p>
   <h2>Solutions</h2>
   <p>
-    These are some of the environmental challenges facing the world right now. Click on the cards to
-    learn more, or go to the Explore view.
+    These are some of the environmental challenges facing the world right now.
+    Click on the cards to learn more, or go to the Explore view.
   </p>
   <div id="icons">
     <Card
       ><Content>
         <h5>Deforestation</h5>
-        <a href="/explore/deforestation"><PrimaryAction><TreeFall /></PrimaryAction></a>
+        <a href="/explore/deforestation"
+          ><PrimaryAction><TreeFall /></PrimaryAction></a
+        >
       </Content></Card
     >
     <Card
       ><Content>
         <h5>Carbon Emissions</h5>
-        <a href="/explore/carbon-emissions"><PrimaryAction><SmokeStack /></PrimaryAction></a>
+        <a href="/explore/carbon-emissions"
+          ><PrimaryAction><SmokeStack /></PrimaryAction></a
+        >
       </Content></Card
     >
     <Card
       ><Content>
         <h5>Habitat Destruction</h5>
-        <a href="/explore/habitat-destruction"><PrimaryAction><HabitatLoss /></PrimaryAction></a>
+        <a href="/explore/habitat-destruction"
+          ><PrimaryAction><HabitatLoss /></PrimaryAction></a
+        >
       </Content></Card
     >
     <Card
       ><Content>
         <h5>Conserving Species</h5>
-        <a href="/explore/conserving-species"><PrimaryAction><Species /></PrimaryAction></a>
+        <a href="/explore/conserving-species"
+          ><PrimaryAction><Species /></PrimaryAction></a
+        >
       </Content></Card
     >
   </div>
