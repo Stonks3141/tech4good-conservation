@@ -8,7 +8,7 @@
 
 <script lang="ts">
   import Button, { Label } from '@smui/button';
-  import Card, { Content } from '@smui/card';
+  import Card, { Content, PrimaryAction } from '@smui/card';
   import { TreeFall, SmokeStack, HabitatLoss, Species } from '$lib/icons';
 </script>
 
@@ -18,8 +18,8 @@
     <Card>
       <Content>
         <h4>
-          The goal of environmental conservation is to ensure the survival of species and is
-          extremely essential to our influence on ecosystems.
+          The goal of environmental conservation is to ensure the long-term survival of species and
+          ecosystems, despite human interaction and interference.
         </h4>
       </Content>
     </Card>
@@ -37,26 +37,34 @@
   </p>
   <h2>Solutions</h2>
   <p>
-    These are some of the environmental challenges facing the world right now. Click on the icons to
-    learn more.
+    These are some of the environmental challenges facing the world right now. Click on the cards to
+    learn more, or go to the Explore view.
   </p>
   <div id="icons">
-    <div class="icon">
-      <h5>Deforestation</h5>
-      <a href="/explore/deforestation"><TreeFall /></a>
-    </div>
-    <div class="icon">
-      <h5>Carbon Emissions</h5>
-      <a href="/explore/carbon-emissions"><SmokeStack /></a>
-    </div>
-    <div class="icon">
-      <h5>Habitat Destruction</h5>
-      <a href="/explore/habitat-destruction"><HabitatLoss /></a>
-    </div>
-    <div class="icon">
-      <h5>Conserving Species</h5>
-      <a href="/explore/conserving-species"><Species /></a>
-    </div>
+    <Card
+      ><Content>
+        <h5>Deforestation</h5>
+        <a href="/explore/deforestation"><PrimaryAction><TreeFall /></PrimaryAction></a>
+      </Content></Card
+    >
+    <Card
+      ><Content>
+        <h5>Carbon Emissions</h5>
+        <a href="/explore/carbon-emissions"><PrimaryAction><SmokeStack /></PrimaryAction></a>
+      </Content></Card
+    >
+    <Card
+      ><Content>
+        <h5>Habitat Destruction</h5>
+        <a href="/explore/habitat-destruction"><PrimaryAction><HabitatLoss /></PrimaryAction></a>
+      </Content></Card
+    >
+    <Card
+      ><Content>
+        <h5>Conserving Species</h5>
+        <a href="/explore/conserving-species"><PrimaryAction><Species /></PrimaryAction></a>
+      </Content></Card
+    >
   </div>
   <div style="flex-basis: 50px;" />
   <Button href="/explore" variant="raised">
@@ -79,6 +87,7 @@
   }
   .card-container {
     width: 400px;
+    margin: 2rem;
     opacity: 0.75;
   }
   .card-container h4 {
@@ -93,10 +102,11 @@
   }
   #icons {
     display: flex;
+    gap: 1.5rem;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: start;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: stretch;
   }
 </style>
