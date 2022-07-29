@@ -1,14 +1,13 @@
-<svg width="158" height="116" viewBox="0 0 158 116" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect id="background" width="158" height="116" fill="#428A45" />
+<svg width="158" height="116" viewBox="0 0 158 116" fill="none">
+  <rect width="158" height="116" fill="#428A45" />
   <path
-    class="slide"
+    id="road"
     style="--order: 0"
     d="M34.5 68C18.0462 74.1702 3.16667 95.1667 0 100V115.5C2.16667 108.833 21.5337 83.9443 43 75C61 67.5 84.9235 68.6386 107 60C130 51 144.167 17.8333 149.5 0.5H139C136.833 13.6667 125.8 41 101 51C70 63.5 58.5 59 34.5 68Z"
     fill="#484848"
-    clip-path="url(#clip)"
   />
-  <g id="houses" style="--order: 1" clip-path="url(#clip)">
-    <g style="--order: 1" class="slide">
+  <g id="houses" style="--order: 1">
+    <g style="--order: 1">
       <rect
         x="49"
         y="75.8755"
@@ -18,7 +17,7 @@
         fill="#836655"
       />
     </g>
-    <g style="--order: 2" class="slide">
+    <g style="--order: 2">
       <rect
         x="110"
         y="63.2121"
@@ -28,7 +27,7 @@
         fill="#836655"
       />
     </g>
-    <g style="--order: 3" class="slide">
+    <g style="--order: 3">
       <rect
         x="9.68289"
         y="56.7937"
@@ -38,7 +37,7 @@
         fill="#836655"
       />
     </g>
-    <g style="--order: 4" class="slide">
+    <g style="--order: 4">
       <rect
         x="70"
         y="38.4644"
@@ -52,7 +51,8 @@
 </svg>
 
 <style>
-  .slide {
+  #road,
+  #houses g {
     animation: slide 6s linear infinite;
     animation-delay: calc(var(--order) * 200ms);
   }
