@@ -4,16 +4,22 @@
   import IconButton from '@smui/icon-button';
   import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
   import List, { Item, Text } from '@smui/list';
-  import { MarkGithub16, LinkExternal16 } from 'svelte-octicons';
+  import { MarkGithub16 } from 'svelte-octicons';
   import { page } from '$app/stores';
+  import { theme } from '$lib/stores';
   import { goto } from '$app/navigation';
 
   let topAppBar: TopAppBarComponentDev;
   let open = false;
-
-  let title: string;
-  page.subscribe((val) => (title = val.stuff.title));
 </script>
+
+<svelte:head>
+  {#if $theme === 'light'}
+    <link rel="stylesheet" href="/smui.css" />
+  {:else if $theme === 'dark'}
+    <link rel="stylesheet" href="/smui-dark.css" />
+  {/if}
+</svelte:head>
 
 <div class="drawer-container">
   <Drawer variant="modal" fixed={false} bind:open>
@@ -28,16 +34,21 @@
         <Item href="/explore" on:click={() => (open = false)}>
           <Text>Explore</Text>
         </Item>
-        <Item href="https://github.com/Stonks3141/tech4good-conservation">
-          <MarkGithub16 />
+        <Item
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/Stonks3141/tech4good-conservation"
+        >
+          <div style={`fill: ${$theme === 'light' ? 'black' : 'white'}`}>
+            <MarkGithub16 />
+          </div>
           &nbsp;
-          <LinkExternal16 />
+          <i class="material-icons" aria-hidden="true" style="font-size: 1rem;">open_in_new</i>
         </Item>
       </List>
     </Content>
   </Drawer>
   <Scrim fixed={false} />
-
   <AppContent on:click={() => (open = false)} class="app-content">
     <TopAppBar bind:this={topAppBar} variant="standard">
       <Row>
@@ -50,38 +61,24 @@
             class="material-icons">arrow_back</IconButton
           >
           <IconButton on:click={() => (open = !open)} class="material-icons">menu</IconButton>
-          <Title>{title}</Title>
+          <Title>{$page.stuff.title}</Title>
         </Section>
         <Section align="end">
-          <IconButton class="material-icons">search</IconButton>
+          <IconButton
+            on:click={() => ($theme === 'light' ? ($theme = 'dark') : ($theme = 'light'))}
+            class="material-icons"
+          >
+            {#if $theme == 'light'}
+              light_mode
+            {:else if $theme == 'dark'}
+              dark_mode
+            {/if}
+          </IconButton>
         </Section>
       </Row>
     </TopAppBar>
-
-    <main class="main-content">
-      <AutoAdjust {topAppBar}>
-        <slot />
-      </AutoAdjust>
-    </main>
+    <AutoAdjust {topAppBar}>
+      <slot />
+    </AutoAdjust>
   </AppContent>
 </div>
-
-<style>
-  :global(html),
-  :global(body) {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :global(svg) {
-      fill: white;
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    :global(html),
-    :global(body) {
-      background-color: #f8f8f8;
-    }
-  }
-</style>

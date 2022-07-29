@@ -8,19 +8,21 @@
 
 <script lang="ts">
   import Button, { Label } from '@smui/button';
-  import TreeFall from '$lib/TreeFall.svelte';
-  import SmokeStack from '$lib/SmokeStack.svelte';
-  import HabitatLoss from '$lib/HabitatLoss.svelte';
-  import Species from '$lib/Species.svelte';
+  import Card, { Content } from '@smui/card';
+  import { TreeFall, SmokeStack, HabitatLoss, Species } from '$lib/icons';
 </script>
 
 <div class="outer">
   <div style="flex-basis:10%" />
-  <div class="inner">
-    <h4>
-      The goal of environmental conservation is to ensure the survival of species and is extremely
-      essential to our influence on ecosystems.
-    </h4>
+  <div class="card-container">
+    <Card>
+      <Content>
+        <h4>
+          The goal of environmental conservation is to ensure the survival of species and is
+          extremely essential to our influence on ecosystems.
+        </h4>
+      </Content>
+    </Card>
   </div>
   <div style="flex-basis:10%" />
 </div>
@@ -75,15 +77,12 @@
     background-attachment: fixed;
     background-size: cover;
   }
-  .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .card-container {
     width: 400px;
-    padding: 1.5rem;
-    border-radius: 4px;
-    background-color: white;
     opacity: 0.75;
+  }
+  .card-container h4 {
+    padding: 1rem;
   }
   .lower {
     width: 80%;
@@ -99,12 +98,5 @@
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-around;
-  }
-  .icon {
-  }
-  @media (prefers-color-scheme: dark) {
-    .inner {
-      background-color: black;
-    }
   }
 </style>
